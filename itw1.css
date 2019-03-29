@@ -140,10 +140,15 @@ small {
 }
 
 #section-speaker .thumbnail {
-    float: left;
-    margin: 15px;
+    margin: 0;
 }
 
 #section-pricing {
     background-color: #F0F1F3;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
