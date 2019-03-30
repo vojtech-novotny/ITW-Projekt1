@@ -1,20 +1,19 @@
+/* New version */
+
+/* GLOBAL ELEMENTS */
 body {
   font-family: Arial;
+  /* line-height: 1.5em; */
+
   margin: 0pt;
   padding: 10px;
   min-width: 650px;
 }
 
-/* #F0F1F3 */
-
+/* Link attributes */
 a {
     color: White;
     text-decoration: none;
-}
-
-h1 {
-    text-align: center;
-    font-size: 64px;
 }
 
 a:hover {
@@ -22,18 +21,32 @@ a:hover {
     text-decoration: none;
 }
 
+h2 {
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0D1556;
+}
+
+
+/* Start of the page */
+
+/* All content on the page is encapsulated in this class */
 .content {
     margin: auto;
-    max-width: 1170px;
+    max-width: 1140px;
     padding: 15px;
 }
 
-header {
-    height: 100px;
+/* Header */
+.header {
+    /* Header covers Main Title elements. */
+    position: absolute;
     width: 100%;
+    min-width: 650px;
+    max-width: calc(100vw - 30px);
+    padding-top: 40px;
     float: left;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .logo {
@@ -47,60 +60,138 @@ header {
 .main-menu li {
     display: inline;
     padding: 15px;
+
+    font-size: 16px;
     text-transform: uppercase;
 }
 
+/* Main Title */
 .main-title {
-    color: White;
     height: 100vh;
+    min-height: 650px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: White;
+
     background-size: cover 100vh;
     background-image: url("img/img-jumbotron-bg.jpg");
     background-position: center;
     background-attachment: fixed;
-    padding: 15px;
 }
 
 .main-title .content {
-    max-width: 800px;
+    /* Main title content is narrower than all else. */
+    max-width: 850px;
+    margin: auto;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .event-date {
     text-align: center;
-    font-size: 19px;
+    font-size: 25px;
+}
+
+h1 {
+    margin-bottom: 8px;
+
+    text-align: center;
+    font-size: 64px;
 }
 
 .main-title .lead {
-    font-size: 19px;
-    color: #D0D0D0;
+    margin-top: 8px;
+
     text-align: center;
+    line-height: 1.5em;
+    font-size: 23px;
+    color: #B0B0B0;
 }
 
-.btn {
-    width: 150px;
+.main-title .btn {
+    width: auto;
     color: white;
-    padding: 14px 25px;
+    padding: 20px 25px;
     text-align: center;
     text-decoration: none;
+    font-size: 19px;
     display: inline-block;
     border-color: White;
     border-style: solid;
+    border-width: 2px;
     margin: auto;
     display: block;
 }
 
-.btn:hover {
+.main-title .btn:hover {
     border-color: #fd367e;
+    color: #fd367e;
 }
 
-.about-event {
+/* section-intro */
+#section-intro {
     display: flex;
 }
 
-h2 {
-    font-size: 36px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #0D1556;
+#section-intro .content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+}
+
+#section-intro .lead {
+    max-width: 760px;
+    margin-right: 15px;
+
+    line-height: 1.5em;
+    font-size: 19px;
+}
+
+#section-intro .contact {
+    min-width: 370px;
+    padding-top: 20px;
+
+
+    line-height: 1.5em;
+}
+
+#section-intro address {
+    font-style: normal;
+    color: #505050;
+}
+
+/* section-speaker */
+#section-speaker {
+    background-color: #F0F1F3;
+}
+
+#section-speaker .content {
+    max-width: 1140px;
+}
+
+#section-speaker .section-content {
+    display: flex;
+    flex-flow: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+figure {
+    align-self: center;
+    margin: 10px;
+}
+
+figure img {
+    align-self: center;
 }
 
 figcaption {
@@ -116,39 +207,4 @@ small {
     display: block;
     text-transform: uppercase;
     color: #505050;
-}
-
-#section-intro .lead {
-    float: left;
-    max-width: 819px;
-    /* width: 70%; */
-}
-
-#section-intro .contact {
-    float: left;
-    min-width: 350px;
-}
-
-#section-intro address {
-    font-style: normal;
-    color: #505050;
-}
-
-#section-speaker {
-    display: flex;
-    background-color: #F0F1F3;
-}
-
-#section-speaker .thumbnail {
-    margin: 0;
-}
-
-#section-pricing {
-    background-color: #F0F1F3;
-}
-
-.section-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
 }
